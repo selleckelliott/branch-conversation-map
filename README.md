@@ -1,18 +1,22 @@
 # Branch
 
-A local app for organizing AI conversations into project maps, branching from specific messages, comparing paths, and merging selected context with source links.
+A native Windows overlay for mapping conversations in Codex desktop. The map follows Codex's central content area while leaving its project sidebar and composer available. It reads real saved chats, opens them in Codex, and supports native forks and reviewed merges.
 
 Open source under the [MIT License](LICENSE). Contributions are welcome.
 
-## Run
+**Start here: [Codex desktop overlay](desktop/README.md).** Double-click `desktop/start-desktop.cmd` to build and open the native app. No website or local web server is needed for the desktop overlay.
+
+The original web proof of concept is retained below for reference. It is not the primary product direction.
+
+## Original web proof of concept
 
 Requires Node.js 22 or later. No dependency installation is needed.
 
 ```sh
-npm start
+npm run start:web
 ```
 
-Open http://127.0.0.1:5180. On Windows, you can also double-click `start.cmd`. Keep the server running while you use the app. If it is already running, use its existing browser tab.
+Open http://127.0.0.1:5180. Keep this web proof-of-concept server running while using that interface. The root `start.cmd` opens the native desktop app. If it is already running, use its existing browser tab.
 
 ## Use
 
@@ -39,7 +43,7 @@ For Codex, run the following in this project directory to register the bridge. T
 codex mcp add branch --env BRANCH_URL=http://127.0.0.1:5180 -- node "$((Get-Location).Path)\mcp-server.mjs"
 ```
 
-Keep `npm start` running. After your client loads the server, try:
+Keep `npm run start:web` running. After your client loads the server, try:
 
 > List my Branch projects. Read the conversation I select, help me continue it, and save your response to that Branch conversation.
 
