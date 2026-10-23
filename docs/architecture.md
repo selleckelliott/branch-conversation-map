@@ -1,5 +1,7 @@
 # Branch 0.2
 
+This document describes the original web proof of concept. The primary product is now the [native Codex desktop overlay](../desktop/README.md), which uses WPF and Codex App Server directly and does not depend on this HTTP architecture.
+
 The browser renders the workspace. A loopback-only Node HTTP server owns persistence. The stdio MCP bridge calls that same HTTP API, so AI clients and the browser cannot independently overwrite the workspace file.
 
 ## Data and context
