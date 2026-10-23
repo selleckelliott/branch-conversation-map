@@ -2,6 +2,8 @@
 
 A local app for organizing AI conversations into project maps, branching from specific messages, comparing paths, and merging selected context with source links.
 
+Open source under the [MIT License](LICENSE). Contributions are welcome.
+
 ## Run
 
 Requires Node.js 22 or later. No dependency installation is needed.
